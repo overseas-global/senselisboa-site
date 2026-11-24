@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SENSE LISBOA | Brevemente</title>
+<meta name="description" content="SENSE LISBOA. Brevemente. Deixe o seu contacto para mais informações.">
+<meta name="theme-color" content="#7F403C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="SENSE LISBOA | Brevemente">
+<meta property="og:description" content="Deixe o seu contacto para mais informações.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:image" content="/og.png">
+<style>
+  @font-face{font-family:"Deuterium";src:url(/fonts/Deuterium-Light.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
+  @font-face{font-family:"Deuterium";src:url(/fonts/Deuterium-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Deuterium";src:url(/fonts/Deuterium-Bold.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Work Sans";src:url(/fonts/WorkSans-Light.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
+  @font-face{font-family:"Work Sans";src:url(/fonts/WorkSans-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Work Sans";src:url(/fonts/WorkSans-SemiBold.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+  :root{
+    --pedra:#E4E3D8; --terracota:#7F403C; --areia:#8E8469;
+    --font:"Work Sans","Helvetica Neue",Arial,sans-serif; --title:"Deuterium","Work Sans","Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;background:var(--terracota);color:var(--pedra);font-family:var(--font);font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;flex:none;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6vh 24px 10vh;overflow:hidden;isolation:isolate;background:#85504A url(/video/poster.jpg) center 49%/cover no-repeat}
+  .bv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 49%;z-index:0;pointer-events:none;background:transparent}
+  .logo{position:relative;z-index:3;display:block;width:min(56vw,540px);height:auto;color:#F3EBE4;opacity:0;filter:blur(8px);animation:logo 1.9s ease-out .4s forwards}
+  @keyframes logo{to{opacity:1;filter:blur(0)}}
+  .soon{font-family:var(--title);font-weight:400;position:relative;z-index:3;margin-top:clamp(28px,6vh,56px);padding-left:.55em;font-size:clamp(.78rem,1.5vw,.95rem);letter-spacing:.55em;text-transform:uppercase;color:#F3EBE4;opacity:0;animation:fade 1.4s ease-out 1.8s forwards}
+  @keyframes fade{to{opacity:.92}}
+  @media (prefers-reduced-motion:reduce){
+    .bv{display:none}
+    .logo{animation:none;opacity:1;filter:none}
+    .soon{animation:none;opacity:.92}
+  }
+
+  /* ---------- CTA discreto (centrado, por baixo do Brevemente) ---------- */
+  html{scroll-behavior:smooth}
+  .cta{position:relative;z-index:3;margin-top:clamp(26px,5vh,44px);font-family:var(--font);font-weight:400;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;color:#F3EBE4;border:1px solid rgba(243,235,228,.5);padding:13px 22px 13px 26px;opacity:0;animation:ctain 1.2s ease 2.9s forwards;transition:color .3s,border-color .3s,background .3s}
+  .cta:hover,.cta:focus-visible{background:#F3EBE4;color:var(--terracota);border-color:#F3EBE4}
+  @keyframes ctain{to{opacity:1}}
+  @media (max-width:560px){.cta{font-size:.66rem;padding:12px 16px 12px 20px;letter-spacing:.22em}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta{animation:none;opacity:1}}
+
+  /* ---------- SEGUNDA TELA: a linha da marca ---------- */
+  .cue{position:absolute;z-index:3;left:50%;bottom:0;width:1px;height:clamp(40px,8vh,72px);background:linear-gradient(to bottom,rgba(243,235,228,0),rgba(243,235,228,.85));transform-origin:top;animation:cue 2.4s ease-in-out 4.5s infinite;opacity:0}
+  @keyframes cue{0%{opacity:0;transform:scaleY(0)}35%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(1) translateY(14px)}}
+  .s2{position:relative;height:340vh;background:#E4E3D8}
+  .s2 .stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:radial-gradient(75% 65% at 50% 45%,#EAE8DF 0%,#E4E3D8 100%)}
+  .s2 svg{position:absolute;inset:0;width:100%;height:100%}
+  .s2 #ln{fill:none;stroke:#7F403C;stroke-linecap:round;stroke-linejoin:round}
+  .s2 #tx{fill:#7F403C}
+  @media (prefers-reduced-motion:reduce){.cue{display:none}}
+
+  /* ---------- CONTACTO (formulário único) ---------- */
+  footer{background:var(--pedra);color:var(--terracota)}
+  .contact{position:relative;overflow:hidden;padding:clamp(72px,12vh,140px) 24px clamp(120px,18vh,200px)}
+  .cwrap{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(36px,6vw,96px);align-items:start}
+  .eyebrow{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:22px}
+  .ctitle{font-family:var(--title);font-weight:300;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.08;letter-spacing:.005em;margin-bottom:18px}
+  .csub{font-size:1rem;line-height:1.6;opacity:.85;max-width:34ch}
+  .card{background:rgba(255,255,255,.5);padding:clamp(26px,4vw,48px)}
+  form{display:grid;gap:22px}
+  .fld{display:flex;flex-direction:column;gap:8px;min-width:0}
+  label.l{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase}
+  label.l span{text-transform:none;letter-spacing:0;opacity:.7;font-size:.82rem}
+  .in{width:100%;font:inherit;font-size:1.05rem;font-weight:300;color:var(--terracota);background:rgba(255,255,255,.55);border:1px solid rgba(127,64,60,.32);border-radius:0;padding:16px 16px;outline:none;transition:border-color .2s,background .2s}
+  .in:focus{border-color:var(--terracota);background:#fff}
+  .in::placeholder{color:var(--terracota);opacity:.3}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .sel{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%237F403C' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+  .sel:invalid{color:rgba(127,64,60,.45)}
+  .sel option{color:#2b1c1a}
+  .chk{display:flex;gap:12px;align-items:flex-start;font-size:.88rem;line-height:1.5}
+  .chk input{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--terracota)}
+  .chk a{color:inherit}
+  .go{font:inherit;font-weight:600;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--pedra);background:var(--terracota);border:0;padding:19px 30px;cursor:pointer;transition:opacity .2s;width:100%}
+  .go:hover{opacity:.9}
+  .go[disabled]{opacity:.55;cursor:default}
+  .hint{font-size:.8rem;opacity:.7}
+  .hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .msg{min-height:1.3em;font-size:.92rem}
+  .msg.err{color:#8a2b22}
+  .thanks{display:none}
+  .sent form{display:none}
+  .sent .thanks{display:block;animation:entra .8s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes entra{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .thanks .ctitle{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:12px}
+  .thanks p{font-size:1rem;opacity:.85}
+  .cv{position:absolute;left:0;right:0;bottom:56px;width:100%;height:clamp(90px,17vh,170px);pointer-events:none}
+  .cv path{fill:none;stroke:var(--terracota);stroke-width:1;vector-effect:non-scaling-stroke;opacity:.5}
+  .band{background:var(--terracota);color:var(--pedra);padding:clamp(40px,7vh,64px) 24px 0}
+  .partners{display:flex;align-items:center;justify-content:center;gap:clamp(28px,5vw,56px);flex-wrap:wrap}
+  .pl{display:block;width:auto;opacity:.95}
+  .pl.ov{height:clamp(28px,3.4vw,40px)}
+  .pl.ag{height:clamp(52px,6vw,68px)}
+  .sep{width:1px;height:clamp(36px,5vw,52px);background:rgba(228,227,216,.4)}
+  .legal{position:relative;max-width:1120px;width:100%;margin:0 auto;margin-top:clamp(28px,5vh,44px);padding:18px 0 24px;border-top:1px solid rgba(228,227,216,.25);display:flex;gap:10px 24px;flex-wrap:wrap;justify-content:space-between;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+  .legal a{color:inherit}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--terracota);outline-offset:3px}
+  @media (prefers-reduced-motion:reduce){.sent .thanks{animation:none}}
+  @media (max-width:560px){.two{grid-template-columns:1fr}}
+  @media (max-width:860px){.cwrap{grid-template-columns:1fr}.csub{max-width:none}.contact{padding-bottom:150px}}
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+<main class="hero" id="hero">
+  <h1 class="sr">SENSE LISBOA</h1>
+  <video class="bv" id="v2" muted playsinline loop autoplay preload="auto" poster="/video/poster.jpg" aria-hidden="true"><source src="/video/sombras.mp4" type="video/mp4"></video>
+  <svg class="logo" role="img" aria-label="SENSE LISBOA" xmlns="http://www.w3.org/2000/svg" viewBox="311.31 321.23 567.93 199.43"><path fill="currentColor" fill-rule="evenodd" d="M425.197,321.232L414.567,321.232C414.491,321.232 414.421,321.252 414.357,321.282C384.035,321.409 376.793,348.524 369.793,374.753C362.554,401.872 355.718,427.487 325.984,427.487C325.917,427.487 325.853,427.503 325.794,427.531L311.811,427.531C311.535,427.531 311.311,427.755 311.311,428.031L311.311,435.118C311.311,435.395 311.535,435.618 311.811,435.618L325.984,435.618C326.051,435.618 326.116,435.603 326.175,435.574C362.624,435.466 371.371,403.900 379.093,376.044C385.748,352.037 392.034,329.362 414.567,329.362C414.639,329.362 414.707,329.346 414.769,329.318L425.197,329.318C425.473,329.318 425.697,329.095 425.697,328.818L425.697,321.732C425.697,321.456 425.473,321.232 425.197,321.232M510.237,321.232L453.544,321.232C453.268,321.232 453.044,321.456 453.044,321.732L453.044,435.118C453.044,435.395 453.268,435.618 453.544,435.618L510.237,435.618C510.513,435.618 510.737,435.395 510.737,435.118L510.737,428.031C510.737,427.755 510.513,427.531 510.237,427.531L461.131,427.531L461.131,382.468L510.237,382.468C510.513,382.468 510.737,382.245 510.737,381.968L510.737,374.881C510.737,374.605 510.513,374.381 510.237,374.381L461.131,374.381L461.131,329.318L510.237,329.318C510.513,329.318 510.737,329.095 510.737,328.818L510.737,321.732C510.737,321.456 510.513,321.232 510.237,321.232M652.468,435.119L652.468,321.733C652.468,321.456 652.244,321.233 651.968,321.233L644.881,321.233C644.605,321.233 644.381,321.456 644.381,321.733L644.381,423.099L560.227,321.414C560.132,321.299 559.991,321.233 559.842,321.233L552.756,321.233C552.479,321.233 552.256,321.456 552.256,321.733L552.256,435.119C552.256,435.395 552.479,435.619 552.756,435.619L559.842,435.619C560.118,435.619 560.342,435.395 560.342,435.119L560.342,333.751L644.496,435.437C644.591,435.553 644.732,435.619 644.881,435.619L651.968,435.619C652.244,435.619 652.468,435.395 652.468,435.119M878.740,329.319C879.016,329.319 879.240,329.095 879.240,328.819L879.240,321.733C879.240,321.456 879.016,321.233 878.740,321.233L822.048,321.233C821.771,321.233 821.548,321.456 821.548,321.733L821.548,435.119C821.548,435.395 821.771,435.619 822.048,435.619L878.740,435.619C879.016,435.619 879.240,435.395 879.240,435.119L879.240,428.032C879.240,427.756 879.016,427.532 878.740,427.532L829.634,427.532L829.634,382.469L878.740,382.469C879.016,382.469 879.240,382.245 879.240,381.969L879.240,374.882C879.240,374.606 879.016,374.382 878.740,374.382L829.634,374.382L829.634,329.319L878.740,329.319M793.701,321.232L783.071,321.232C782.998,321.232 782.928,321.248 782.865,321.276C752.536,321.399 745.298,348.521 738.297,374.753C731.058,401.872 724.222,427.487 694.488,427.487C694.421,427.487 694.356,427.503 694.298,427.531L680.315,427.531C680.039,427.531 679.815,427.755 679.815,428.031L679.815,435.118C679.815,435.395 680.039,435.618 680.315,435.618L694.488,435.618C694.555,435.618 694.620,435.603 694.679,435.574C731.128,435.466 739.876,403.900 747.597,376.044C754.253,352.037 760.538,329.362 783.071,329.362C783.138,329.362 783.203,329.346 783.262,329.318L793.701,329.318C793.977,329.318 794.201,329.095 794.201,328.818L794.201,321.732C794.201,321.456 793.977,321.232 793.701,321.232M464.173,516.469L439.546,516.469L439.546,463.464C439.546,463.188 439.322,462.964 439.046,462.964L435.827,462.964C435.551,462.964 435.327,463.188 435.327,463.464L435.327,520.157C435.327,520.434 435.551,520.657 435.827,520.657L464.173,520.657C464.449,520.657 464.673,520.434 464.673,520.157L464.673,516.969C464.673,516.693 464.449,516.469 464.173,516.469M496.064,462.964L492.521,462.964C492.244,462.964 492.021,463.188 492.021,463.464L492.021,520.157C492.021,520.434 492.244,520.657 492.521,520.657L496.064,520.657C496.340,520.657 496.564,520.434 496.564,520.157L496.564,463.464C496.564,463.188 496.340,462.964 496.064,462.964M547.257,484.866C544.555,483.603 542.414,482.202 540.893,480.703C539.306,479.117 538.502,477.179 538.502,474.939C538.502,472.647 539.284,470.757 540.892,469.160C542.501,467.562 544.387,466.785 546.656,466.785C548.896,466.785 550.836,467.579 552.420,469.141C553.314,470.035 553.965,471.027 554.355,472.089C554.402,472.215 554.497,472.317 554.620,472.372C554.743,472.427 554.883,472.430 555.008,472.381L557.823,471.268C558.068,471.172 558.196,470.902 558.116,470.652C557.607,469.052 556.674,467.590 555.350,466.312C552.946,463.932 550.021,462.726 546.656,462.726C543.267,462.726 540.341,463.939 537.961,466.333C535.581,468.724 534.374,471.620 534.374,474.939C534.374,478.329 535.581,481.255 537.962,483.635C540.301,485.973 543.524,487.839 547.509,489.166C550.770,490.503 553.557,492.313 555.792,494.549C558.300,497.057 559.572,500.119 559.572,503.649C559.572,507.202 558.300,510.275 555.792,512.784C553.282,515.293 550.209,516.565 546.656,516.565C543.127,516.565 540.066,515.293 537.556,512.784C535.402,510.631 534.153,508.077 533.842,505.194C533.825,505.042 533.740,504.905 533.609,504.823C533.480,504.743 533.319,504.725 533.174,504.778L530.219,505.855C529.996,505.936 529.861,506.164 529.896,506.399C530.419,509.897 532.022,513.008 534.658,515.644C537.960,518.971 541.997,520.658 546.656,520.658C551.314,520.658 555.351,518.983 558.653,515.680C561.956,512.378 563.631,508.330 563.631,503.649C563.631,498.991 561.956,494.966 558.653,491.686C555.583,488.616 551.749,486.322 547.257,484.866M595.422,480.646L595.422,467.155L604.780,467.155C606.792,467.155 608.428,467.788 609.786,469.087C611.136,470.383 611.793,471.987 611.793,473.989C611.793,475.987 611.138,477.558 609.792,478.794C608.628,479.872 607.201,480.496 605.596,480.646L595.422,480.646M595.422,485.047L604.533,485.047C608.815,485.047 612.522,486.583 615.552,489.614C618.583,492.644 620.119,496.351 620.119,500.633C620.119,504.920 618.581,508.677 615.547,511.800L615.546,511.802C612.835,514.627 609.573,516.205 605.850,516.492C605.803,516.477 605.754,516.469 605.702,516.469L595.422,516.469L595.422,485.047M611.881,481.920C614.509,479.475 615.840,476.811 615.840,473.989C615.840,470.960 614.748,468.337 612.591,466.194C610.436,464.051 607.808,462.964 604.780,462.964L591.733,462.964C591.457,462.964 591.233,463.188 591.233,463.464L591.233,520.158C591.233,520.434 591.457,520.658 591.733,520.658L605.702,520.658C605.766,520.658 605.828,520.643 605.884,520.619C610.816,520.504 615.118,518.584 618.675,514.907C622.531,510.906 624.486,506.103 624.486,500.633C624.486,495.138 622.529,490.382 618.685,486.514C616.562,484.176 614.277,482.634 611.881,481.920M701.799,491.623C701.799,498.451 699.352,504.367 694.525,509.204C689.697,514.042 683.789,516.495 676.961,516.495C670.133,516.495 664.225,514.042 659.398,509.204C654.570,504.367 652.122,498.451 652.122,491.623C652.122,484.796 654.570,478.887 659.398,474.060C664.225,469.232 670.134,466.785 676.961,466.785C683.788,466.785 689.697,469.232 694.525,474.060C699.352,478.887 701.799,484.796 701.799,491.623M676.961,462.588C668.983,462.588 662.075,465.449 656.432,471.093C650.786,476.736 647.926,483.644 647.926,491.623C647.926,499.602 650.786,506.510 656.432,512.153C662.075,517.797 668.983,520.658 676.961,520.658C684.940,520.658 691.846,517.797 697.491,512.153C703.135,506.509 705.996,499.602 705.996,491.623C705.996,483.644 703.135,476.737 697.491,471.093C691.846,465.449 684.940,462.588 676.961,462.588M762.731,495.451L746.754,495.451L754.743,474.262L762.731,495.451M755.210,463.611C755.137,463.417 754.951,463.288 754.743,463.288C754.535,463.288 754.348,463.417 754.275,463.611L732.998,519.981C732.940,520.135 732.960,520.307 733.054,520.442C733.147,520.577 733.301,520.658 733.465,520.658L736.891,520.658C737.099,520.658 737.286,520.529 737.359,520.335L745.199,499.550L764.286,499.550L772.126,520.335C772.199,520.529 772.385,520.658 772.593,520.658L775.985,520.658C776.149,520.658 776.302,520.578 776.396,520.442C776.490,520.307 776.510,520.136 776.453,519.981L755.210,463.611"/></svg>
+  <p class="soon">Brevemente</p>
+  <a class="cta" id="cta" href="#contacto">Registar interesse</a>
+  <div class="cue" aria-hidden="true"></div>
+</main>
+
+<section class="s2" id="s2" aria-label="Lisboa com espaço para viver">
+  <div class="stick">
+    <svg id="sv" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+      <defs><clipPath id="tc"><rect id="tcr" x="0" y="0" width="0" height="4000"/></clipPath></defs>
+      <g id="tx" clip-path="url(#tc)"></g>
+      <path id="ln" pathLength="1" d="M0,0"/>
+    </svg>
+    <p class="sr">Lisboa com espaço para viver</p>
+  </div>
+</section>
+
+<footer>
+  <section class="contact" id="contacto" aria-label="Contacto">
+    <div class="cwrap">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2 class="ctitle">Deixe o seu contacto.</h2>
+        <p class="csub">Para receber mais informações sobre o SENSE LISBOA.</p>
+      </div>
+      <div class="card" id="box">
+        <form id="f" novalidate>
+          <div class="fld"><label class="l" for="nome">Nome</label><input class="in" id="nome" name="nome" type="text" autocomplete="name" required></div>
+          <div class="fld"><label class="l" for="email">E-mail</label><input class="in" id="email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
+          <div class="fld"><label class="l" for="tel">Telefone</label><input class="in" id="tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+          <div class="two">
+            <div class="fld"><label class="l" for="tip">Tipologia</label><select class="in sel" id="tip" name="tipologia" required><option value="" disabled selected>Selecione</option><option>T1</option><option>T2</option><option>T3</option><option>T4</option><option>Não sei</option></select></div>
+            <div class="fld"><label class="l" for="int">Interesse</label><select class="in sel" id="int" name="interesse" required><option value="" disabled selected>Selecione</option><option>Residência própria</option><option>Investimento</option></select></div>
+          </div>
+          <label class="chk" for="ok"><input id="ok" name="consentimento" type="checkbox" required><span>Autorizo o tratamento dos meus dados pessoais para ser contactado sobre o SENSE LISBOA, nos termos da <a href="/privacidade/">Política de Privacidade</a>.</span></label>
+          <div class="hp" aria-hidden="true"><label>Empresa <input type="text" name="empresa" tabindex="-1" autocomplete="off"></label></div>
+          <div class="cf-turnstile" id="ts" data-sitekey="0x4AAAAAAGRFYjuc3gNTXD2H" data-language="pt" data-theme="light" data-appearance="interaction-only" data-size="flexible"></div>
+          <p class="msg" id="msg" role="status" aria-live="polite"></p>
+          <button class="go" type="submit" id="go">Enviar contacto</button>
+          <p class="hint">Os seus dados são usados apenas para este contacto.</p>
+        </form>
+        <div class="thanks" id="done" role="status" aria-live="polite">
+          <p class="ctitle" id="thx">Obrigado.</p>
+          <p>Enviámos-lhe um e-mail para confirmar o seu endereço. Clique no link dessa mensagem para concluir o registo.</p>
+        </div>
+      </div>
+    </div>
+    <svg class="cv" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0,92 L640,92 C720,92 745,90 768,50 C790,10 820,8 1000,8"/></svg>
+  </section>
+  <div class="band">
+    <div class="partners">
+      <img class="pl ov" src="/img/overseas-branco.png" alt="Overseas" width="700" height="109">
+      <span class="sep" aria-hidden="true"></span>
+      <img class="pl ag" src="/img/ag-branco.png" alt="Grupo André Guimarães" width="497" height="334">
+    </div>
+    <div class="legal"><span>&copy; 2026 SENSE LISBOA</span><a href="/privacidade/">Política de Privacidade</a></div>
+  </div>
+</footer>
+
+<script>
+/* ---------- Segunda tela: a linha desenha o S, recolhe e deixa a frase ---------- */
+(function(){
+  var s2=document.getElementById('s2'); if(!s2)return;
+  var sv=document.getElementById('sv'), ln=document.getElementById('ln'), tx=document.getElementById('tx'), tcr=document.getElementById('tcr'),
+      NS='http://www.w3.org/2000/svg', G={"L": ["M254.3 -1000.0V-68.6L200.0 -122.9H850.0V0.0H128.6V-1000.0Z", 879], "I": ["M254.3 -1000.0V0.0H128.6V-1000.0Z", 383], "S": ["M100.0 -77.1V-215.7H111.4Q180.0 -165.7 270.7 -137.1Q361.4 -108.6 448.6 -108.6Q535.7 -108.6 593.6 -132.1Q651.4 -155.7 678.6 -195.0Q705.7 -234.3 705.7 -280.0Q705.7 -325.7 680.7 -357.1Q655.7 -388.6 593.6 -413.6Q531.4 -438.6 418.6 -460.0Q247.1 -492.9 166.4 -560.7Q85.7 -628.6 85.7 -741.4Q85.7 -817.1 129.3 -879.3Q172.9 -941.4 253.6 -977.9Q334.3 -1014.3 441.4 -1014.3Q541.4 -1014.3 630.7 -988.6Q720.0 -962.9 771.4 -924.3V-787.1H760.0Q702.9 -832.9 617.1 -862.1Q531.4 -891.4 441.4 -891.4Q361.4 -891.4 309.3 -870.0Q257.1 -848.6 234.3 -815.0Q211.4 -781.4 211.4 -741.4Q211.4 -701.4 232.9 -672.1Q254.3 -642.9 312.9 -619.3Q371.4 -595.7 482.9 -574.3Q657.1 -541.4 744.3 -470.7Q831.4 -400.0 831.4 -281.4Q831.4 -200.0 787.1 -132.9Q742.9 -65.7 656.4 -25.7Q570.0 14.3 448.6 14.3Q355.7 14.3 260.7 -10.7Q165.7 -35.7 100.0 -77.1Z", 903], "B": ["M128.6 -1000.0H487.1Q667.1 -1000.0 759.3 -927.1Q851.4 -854.3 851.4 -732.9Q851.4 -651.4 809.3 -595.7Q767.1 -540.0 685.7 -510.0V-542.9Q795.7 -512.9 852.1 -443.6Q908.6 -374.3 908.6 -282.9Q908.6 -150.0 810.0 -75.0Q711.4 0.0 517.1 0.0H128.6ZM200.0 -122.9H517.1Q658.6 -122.9 720.7 -165.7Q782.9 -208.6 782.9 -282.9Q782.9 -324.3 756.4 -364.3Q730.0 -404.3 670.0 -430.7Q610.0 -457.1 517.1 -457.1H220.0V-574.3H501.4Q610.0 -574.3 667.9 -617.1Q725.7 -660.0 725.7 -732.9Q725.7 -797.1 668.6 -837.1Q611.4 -877.1 487.1 -877.1H200.0L254.3 -931.4V-68.6Z", 994], "O": ["M85.7 -500.0Q85.7 -642.9 154.3 -761.4Q222.9 -880.0 341.4 -948.6Q460.0 -1017.1 602.9 -1017.1Q745.7 -1017.1 864.3 -948.6Q982.9 -880.0 1051.4 -761.4Q1120.0 -642.9 1120.0 -500.0Q1120.0 -357.1 1051.4 -238.6Q982.9 -120.0 864.3 -51.4Q745.7 17.1 602.9 17.1Q460.0 17.1 341.4 -51.4Q222.9 -120.0 154.3 -238.6Q85.7 -357.1 85.7 -500.0ZM994.3 -500.0Q994.3 -608.6 942.9 -698.6Q891.4 -788.6 801.4 -841.4Q711.4 -894.3 602.9 -894.3Q494.3 -894.3 404.3 -841.4Q314.3 -788.6 262.9 -698.6Q211.4 -608.6 211.4 -500.0Q211.4 -391.4 262.9 -301.4Q314.3 -211.4 404.3 -158.6Q494.3 -105.7 602.9 -105.7Q711.4 -105.7 801.4 -158.6Q891.4 -211.4 942.9 -301.4Q994.3 -391.4 994.3 -500.0Z", 1206], "A": ["M485.7 -1000.0H694.3L1162.9 0.0H1024.3L612.9 -877.1H567.1L155.7 0.0H17.1ZM248.6 -408.6H934.3V-291.4H248.6Z", 1180], "C": ["M85.7 -500.0Q85.7 -644.3 155.0 -762.1Q224.3 -880.0 345.7 -948.6Q467.1 -1017.1 617.1 -1017.1Q738.6 -1017.1 832.9 -983.6Q927.1 -950.0 984.3 -900.0V-744.3H972.9Q908.6 -814.3 815.0 -854.3Q721.4 -894.3 617.1 -894.3Q501.4 -894.3 408.6 -842.1Q315.7 -790.0 263.6 -699.3Q211.4 -608.6 211.4 -500.0Q211.4 -390.0 262.9 -300.0Q314.3 -210.0 408.6 -157.9Q502.9 -105.7 624.3 -105.7Q722.9 -105.7 811.4 -140.7Q900.0 -175.7 981.4 -254.3H992.9V-110.0Q931.4 -52.9 834.3 -17.9Q737.1 17.1 624.3 17.1Q468.6 17.1 345.7 -50.7Q222.9 -118.6 154.3 -237.1Q85.7 -355.7 85.7 -500.0Z", 1064], "M": ["M128.6 -1000.0H282.9L697.1 -487.1L1111.4 -1000.0H1265.7V0.0H1140.0V-804.3H1111.4L697.1 -291.4L282.9 -804.3H254.3V0.0H128.6Z", 1394], "E": ["M128.6 -1000.0H850.0V-877.1H200.0L254.3 -931.4V-68.6L200.0 -122.9H864.3V0.0H128.6ZM231.4 -562.9H835.7V-448.6H231.4Z", 936], "P": ["M128.6 -1000.0H550.0Q665.7 -1000.0 753.6 -959.3Q841.4 -918.6 888.6 -848.6Q935.7 -778.6 935.7 -691.4Q935.7 -542.9 832.1 -457.1Q728.6 -371.4 550.0 -371.4H231.4V-488.6H550.0Q675.7 -488.6 742.9 -540.7Q810.0 -592.9 810.0 -688.6Q810.0 -741.4 779.3 -784.3Q748.6 -827.1 690.0 -852.1Q631.4 -877.1 550.0 -877.1H200.0L254.3 -931.4V0.0H128.6Z", 986], "Ç": ["M85.7 -500.0Q85.7 -644.3 155.0 -762.1Q224.3 -880.0 345.7 -948.6Q467.1 -1017.1 617.1 -1017.1Q738.6 -1017.1 832.9 -983.6Q927.1 -950.0 984.3 -900.0V-744.3H972.9Q908.6 -814.3 815.0 -854.3Q721.4 -894.3 617.1 -894.3Q501.4 -894.3 408.6 -842.1Q315.7 -790.0 263.6 -699.3Q211.4 -608.6 211.4 -500.0Q211.4 -390.0 262.9 -300.0Q314.3 -210.0 408.6 -157.9Q502.9 -105.7 624.3 -105.7Q722.9 -105.7 811.4 -140.7Q900.0 -175.7 981.4 -254.3H992.9V-110.0Q931.4 -52.9 834.3 -17.9Q737.1 17.1 624.3 17.1Q468.6 17.1 345.7 -50.7Q222.9 -118.6 154.3 -237.1Q85.7 -355.7 85.7 -500.0ZM604.3 237.1Q637.1 237.1 659.3 222.9Q681.4 208.6 681.4 182.9Q681.4 154.3 647.1 138.6Q612.9 122.9 515.7 122.9L574.3 0.0H681.4L652.9 58.6Q717.1 65.7 752.1 100.0Q787.1 134.3 787.1 182.9Q787.1 260.0 731.4 298.6Q675.7 337.1 604.3 337.1Q527.1 337.1 472.9 314.3V210.0Q535.7 237.1 604.3 237.1Z", 1064], "R": ["M128.6 -1000.0H515.7Q711.4 -1000.0 816.4 -913.6Q921.4 -827.1 921.4 -678.6Q921.4 -588.6 874.3 -515.7Q827.1 -442.9 735.7 -400.0Q644.3 -357.1 515.7 -357.1H231.4V-471.4H515.7Q610.0 -471.4 672.9 -501.4Q735.7 -531.4 765.7 -578.6Q795.7 -625.7 795.7 -678.6Q795.7 -772.9 727.9 -825.0Q660.0 -877.1 515.7 -877.1H200.0L254.3 -931.4V0.0H128.6ZM280.0 -400.0H455.7L935.7 0.0H738.6Z", 1021], "V": ["M500.0 0.0 17.1 -1000.0H157.1L564.3 -157.1H481.4L888.6 -1000.0H1028.6L545.7 0.0Z", 1046], " ": ["", 314]}, reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      X=[], VW=1600, VH=900, TX0=0, TX1=0, p0=0;
+  function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
+  function ease(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
+  function lineW(str,cap,trk){var w=0;for(var i=0;i<str.length;i++){w+=G[str[i]][1]*cap/1000+(i<str.length-1?trk:0)}return w}
+  function build(){
+    var W=sv.clientWidth||innerWidth,H=sv.clientHeight||innerHeight, land=W/H>=1;
+    VW=land?1600:900; VH=VW*H/W; sv.setAttribute('viewBox','0 0 '+VW+' '+VH);
+    var yb=VH*(land?.70:.66), yt=VH*(land?.30:.34), xb=VW*(land?.50:.30), xc=VW*(land?.78:.72);
+    var dx=xc-xb, dy=yt-yb, mx=xb+dx/2, my=yb+dy/2, ex=VW*.06;
+    ln.setAttribute('d','M'+(-ex)+','+yb+' L'+xb+','+yb+' C'+(xb+.45*dx)+','+yb+' '+(mx-.07*dx)+','+(my-.28*dy)+' '+mx+','+my+' C'+(mx+.07*dx)+','+(my+.28*dy)+' '+(xc-.45*dx)+','+yt+' '+xc+','+yt+' L'+(VW+ex)+','+yt);
+    ln.style.strokeWidth=(1.3*VW/W).toFixed(3);
+    // amostras do x ao longo da linha (para sincronizar o texto com a ponta que recolhe)
+    var L=ln.getTotalLength(); X=[]; for(var i=0;i<=400;i++){X.push(ln.getPointAtLength(L*i/400).x)}
+    // texto
+    while(tx.firstChild)tx.removeChild(tx.firstChild);
+    var lines=land?['LISBOA COM ESPAÇO PARA VIVER']:['LISBOA','COM ESPAÇO','PARA VIVER'];
+    var cap=VW*(land?.0235:.052), trk=cap*.62, maxw=VW*(land?.72:.8), widest=Math.max.apply(null,lines.map(function(s){return lineW(s,cap,trk)}));
+    if(widest>maxw){var k=maxw/widest;cap*=k;trk*=k}
+    var gap=cap*(land?0:2.3), totalH=lines.length*cap+(lines.length-1)*cap*1.3, y=VH/2-totalH/2+cap; TX0=1e9; TX1=-1e9;
+    lines.forEach(function(s){
+      var w=lineW(s,cap,trk), x=VW/2-w/2; TX0=Math.min(TX0,x); TX1=Math.max(TX1,x+w);
+      for(var i=0;i<s.length;i++){var g=G[s[i]]; if(g[0]){var e=document.createElementNS(NS,'path');e.setAttribute('d',g[0]);e.setAttribute('transform','translate('+x.toFixed(2)+' '+y.toFixed(2)+') scale('+(cap/1000).toFixed(5)+')');tx.appendChild(e)} x+=g[1]*cap/1000+trk}
+      y+=cap*2.3;
+    });
+    p0=-1; onScroll();
+  }
+  function frontX(t0){var f=clamp(t0,0,1)*400,i=Math.floor(f),a=X[i],b=X[Math.min(400,i+1)];return a+(b-a)*(f-i)}
+  function draw(p){
+    // 0-.30 a linha desenha-se | .30-.42 pausa | .42-.86 a cauda recolhe e a frase aparece | resto: frase
+    var head=ease(clamp(p/.30,0,1)), tail=ease(clamp((p-.42)/.44,0,1));
+    var vis=Math.max(0,head-tail);
+    ln.style.strokeDasharray=vis+' 3'; ln.style.strokeDashoffset=String(-tail);
+    ln.style.opacity=head>0?1:0;
+    var fx=tail<=0?-1e4:(tail>=1?1e4:frontX(tail));
+    tcr.setAttribute('width',String(Math.max(0,fx)));
+  }
+  function onScroll(){
+    var r=s2.getBoundingClientRect(), vh=innerHeight, total=r.height-vh;
+    draw(clamp((-r.top+vh*.1)/(total+vh*.1),0,1));
+  }
+  build();
+  if(reduce){draw(1);return}
+  var tick=false;
+  window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(function(){tick=false;onScroll()})}},{passive:true});
+  window.addEventListener('resize',function(){build()});
+})();
+
+/* ---------- Formulário ---------- */
+(function(){
+  var ENDPOINT = "https://senselisboa-form.mp-793.workers.dev/lead";
+  var f=document.getElementById('f'), msg=document.getElementById('msg'), go=document.getElementById('go'), box=document.getElementById('box'), t0=Date.now();
+  function err(t,el){msg.className='msg err';msg.textContent=t;if(el)el.focus()}
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); msg.className='msg'; msg.textContent='';
+    var d={nome:f.nome.value.trim(),email:f.email.value.trim(),telefone:f.telefone.value.trim(),tipologia:f.tipologia.value,interesse:f.interesse.value,consentimento:f.consentimento.checked,empresa:f.empresa.value,ms:Date.now()-t0,pagina:location.href};
+    if(!d.nome){return err('Diga-nos como se chama.',f.nome)}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){return err('Esse e-mail não parece válido.',f.email)}
+    if(d.telefone.replace(/\D/g,'').length<9){return err('Indique um número de telefone válido.',f.telefone)}
+    if(!d.tipologia){return err('Escolha a tipologia.',f.tipologia)}
+    if(!d.interesse){return err('Diga-nos o seu interesse.',f.interesse)}
+    if(!d.consentimento){return err('É necessário autorizar o tratamento dos dados para podermos contactá-lo.',f.consentimento)}
+    go.disabled=true; go.textContent='A enviar';
+    function ok(){document.getElementById('thx').textContent='Obrigado, '+d.nome.split(' ')[0]+'.';box.classList.add('sent')}
+    function falha(m){go.disabled=false;go.textContent='Enviar contacto';err(m);try{if(window.turnstile)turnstile.reset('#ts')}catch(x){}}
+    function token(tent){
+      var el=f.querySelector('[name="cf-turnstile-response"]'), v=el&&el.value;
+      if(v)return Promise.resolve(v);
+      if(tent>=80)return Promise.resolve('');
+      return new Promise(function(r){setTimeout(function(){r(token(tent+1))},250)});
+    }
+    token(0).then(function(tk){
+      if(!tk)return falha('Não foi possível verificar que é uma pessoa. Atualize a página e tente de novo.');
+      d.turnstile=tk;
+      return fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+        .then(function(r){return r.json().then(function(j){return {s:r.status,j:j}})})
+        .then(function(x){
+          if(x.j&&x.j.ok){return ok()}
+          var m='Não foi possível enviar. Tente novamente dentro de instantes.';
+          if(x.j&&x.j.erro==='robo')m='Não conseguimos verificar que é uma pessoa. Atualize a página e tente de novo.';
+          if(x.j&&x.j.erro==='limite')m='Foram feitas demasiadas tentativas. Tente de novo mais tarde.';
+          if(x.j&&x.j.erro==='email')m='Por favor use outro endereço de e-mail.';
+          falha(m);
+        });
+    }).catch(function(){falha('Não foi possível enviar. Tente novamente dentro de instantes.')});
+  });
+})();
+</script>
+</body>
+</html>
