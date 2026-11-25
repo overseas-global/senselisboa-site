@@ -49,6 +49,10 @@
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta{animation:none;opacity:1}}
 
   /* ---------- SEGUNDA TELA: a linha da marca ---------- */
+  .lang{position:absolute;z-index:4;top:clamp(20px,4vh,34px);right:clamp(20px,4vw,48px);display:flex;gap:18px;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;opacity:0;animation:fade 1.2s ease-out 3.6s forwards}
+  .lang a{color:#F3EBE4;text-decoration:none;opacity:.6;padding:4px 0 3px;border-bottom:1px solid transparent;transition:opacity .3s,border-color .3s}
+  .lang a:hover{opacity:1}
+  .lang a[aria-current]{opacity:1;border-bottom-color:rgba(243,235,228,.7)}
   .cue{position:absolute;z-index:3;left:50%;bottom:0;width:1px;height:clamp(40px,8vh,72px);background:linear-gradient(to bottom,rgba(243,235,228,0),rgba(243,235,228,.85));transform-origin:top;animation:cue 2.4s ease-in-out 4.5s infinite;opacity:0}
   @keyframes cue{0%{opacity:0;transform:scaleY(0)}35%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(1) translateY(14px)}}
   .s2{position:relative;height:220vh;background:#E4E3D8}
@@ -121,6 +125,7 @@
   <p class="soon">Brevemente</p>
   <a class="cta" id="cta" href="#contacto">Registar interesse</a>
   <div class="cue" aria-hidden="true"></div>
+  <nav class="lang" aria-label="Idioma / Language"><a href="/" hreflang="pt-PT" lang="pt-PT" aria-current="true">PT</a><a href="/en/" hreflang="en" lang="en">EN</a></nav>
 </main>
 
 <section class="s2" id="s2" aria-label="Lisboa com espaço para viver">
@@ -172,7 +177,7 @@
       <span class="sep" aria-hidden="true"></span>
       <a class="pa" href="https://overseasglobal.com" target="_blank" rel="noopener" aria-label="Overseas"><img class="pl ov" src="/img/overseas-branco.png" alt="Overseas" width="700" height="109"></a>
     </div>
-    <div class="legal"><span>&copy; 2026 SENSE LISBOA</span><a href="/privacidade/">Política de Privacidade</a><a href="/en/" hreflang="en" lang="en">EN</a></div>
+    <div class="legal"><span>&copy; 2026 SENSE LISBOA</span><a href="/privacidade/">Política de Privacidade</a></div>
   </div>
 </footer>
 
