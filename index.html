@@ -97,6 +97,8 @@
   .cv path{fill:none;stroke:var(--terracota);stroke-width:1;vector-effect:non-scaling-stroke;opacity:.5}
   .band{background:var(--terracota);color:var(--pedra);padding:clamp(40px,7vh,64px) 24px 0}
   .partners{display:flex;align-items:center;justify-content:center;gap:clamp(28px,5vw,56px);flex-wrap:wrap}
+  .pa{display:block;line-height:0;transition:opacity .3s}
+  .pa:hover{opacity:.75}
   .pl{display:block;width:auto;opacity:.95}
   .pl.ov{height:clamp(28px,3.4vw,40px)}
   .pl.ag{height:clamp(52px,6vw,68px)}
@@ -166,9 +168,9 @@
   </section>
   <div class="band">
     <div class="partners">
-      <img class="pl ov" src="/img/overseas-branco.png" alt="Overseas" width="700" height="109">
+      <a class="pa" href="https://overseasglobal.com" target="_blank" rel="noopener" aria-label="Overseas"><img class="pl ov" src="/img/overseas-branco.png" alt="Overseas" width="700" height="109"></a>
       <span class="sep" aria-hidden="true"></span>
-      <img class="pl ag" src="/img/ag-branco.png" alt="Grupo André Guimarães" width="497" height="334">
+      <a class="pa" href="https://andreguimaraes.com.br" target="_blank" rel="noopener" aria-label="Grupo André Guimarães"><img class="pl ag" src="/img/ag-branco.png" alt="Grupo André Guimarães" width="497" height="334"></a>
     </div>
     <div class="legal"><span>&copy; 2026 SENSE LISBOA</span><a href="/privacidade/">Política de Privacidade</a></div>
   </div>
