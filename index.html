@@ -100,8 +100,8 @@
   .pa{display:block;line-height:0;transition:opacity .3s}
   .pa:hover{opacity:.75}
   .pl{display:block;width:auto;opacity:.95}
-  .pl.ov{height:clamp(28px,3.4vw,40px)}
-  .pl.ag{height:clamp(52px,6vw,68px)}
+  .pl.ov{height:clamp(22px,2.6vw,30px)}
+  .pl.ag{height:clamp(48px,5.2vw,60px)}
   .sep{width:1px;height:clamp(36px,5vw,52px);background:rgba(228,227,216,.4)}
   .legal{position:relative;max-width:1120px;width:100%;margin:0 auto;margin-top:clamp(28px,5vh,44px);padding:18px 0 24px;border-top:1px solid rgba(228,227,216,.25);display:flex;gap:10px 24px;flex-wrap:wrap;justify-content:space-between;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
   .legal a{color:inherit}
@@ -148,8 +148,8 @@
           <div class="fld"><label class="l" for="email">E-mail</label><input class="in" id="email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
           <div class="fld"><label class="l" for="tel">Telefone</label><input class="in" id="tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required></div>
           <div class="two">
-            <div class="fld"><label class="l" for="tip">Tipologia</label><select class="in sel" id="tip" name="tipologia" required><option value="" disabled selected>Selecione</option><option>T1</option><option>T2</option><option>T3</option><option>T4</option><option>Não sei</option></select></div>
-            <div class="fld"><label class="l" for="int">Interesse</label><select class="in sel" id="int" name="interesse" required><option value="" disabled selected>Selecione</option><option>Residência própria</option><option>Investimento</option></select></div>
+            <div class="fld"><label class="l" for="tip">Tipologia</label><select class="in sel" id="tip" name="tipologia" required><option value="" disabled selected>Selecione</option><option>T1</option><option>T2</option><option>T3</option><option>T4</option><option value="Não sei">Não sei</option></select></div>
+            <div class="fld"><label class="l" for="int">Interesse</label><select class="in sel" id="int" name="interesse" required><option value="" disabled selected>Selecione</option><option value="Residência própria">Residência própria</option><option value="Investimento">Investimento</option></select></div>
           </div>
           <label class="chk" for="ok"><input id="ok" name="consentimento" type="checkbox" required><span>Autorizo o tratamento dos meus dados pessoais para ser contactado sobre o SENSE LISBOA, nos termos da <a href="/privacidade/">Política de Privacidade</a>.</span></label>
           <div class="hp" aria-hidden="true"><label>Empresa <input type="text" name="empresa" tabindex="-1" autocomplete="off"></label></div>
@@ -168,11 +168,11 @@
   </section>
   <div class="band">
     <div class="partners">
-      <a class="pa" href="https://overseasglobal.com" target="_blank" rel="noopener" aria-label="Overseas"><img class="pl ov" src="/img/overseas-branco.png" alt="Overseas" width="700" height="109"></a>
-      <span class="sep" aria-hidden="true"></span>
       <a class="pa" href="https://andreguimaraes.com.br" target="_blank" rel="noopener" aria-label="Grupo André Guimarães"><img class="pl ag" src="/img/ag-branco.png" alt="Grupo André Guimarães" width="497" height="334"></a>
+      <span class="sep" aria-hidden="true"></span>
+      <a class="pa" href="https://overseasglobal.com" target="_blank" rel="noopener" aria-label="Overseas"><img class="pl ov" src="/img/overseas-branco.png" alt="Overseas" width="700" height="109"></a>
     </div>
-    <div class="legal"><span>&copy; 2026 SENSE LISBOA</span><a href="/privacidade/">Política de Privacidade</a></div>
+    <div class="legal"><span>&copy; 2026 SENSE LISBOA</span><a href="/privacidade/">Política de Privacidade</a><a href="/en/" hreflang="en" lang="en">EN</a></div>
   </div>
 </footer>
 
@@ -236,7 +236,7 @@
   function err(t,el){msg.className='msg err';msg.textContent=t;if(el)el.focus()}
   f.addEventListener('submit',function(e){
     e.preventDefault(); msg.className='msg'; msg.textContent='';
-    var d={nome:f.nome.value.trim(),email:f.email.value.trim(),telefone:f.telefone.value.trim(),tipologia:f.tipologia.value,interesse:f.interesse.value,consentimento:f.consentimento.checked,empresa:f.empresa.value,ms:Date.now()-t0,pagina:location.href};
+    var d={nome:f.nome.value.trim(),email:f.email.value.trim(),telefone:f.telefone.value.trim(),tipologia:f.tipologia.value,interesse:f.interesse.value,consentimento:f.consentimento.checked,empresa:f.empresa.value,ms:Date.now()-t0,pagina:location.href,lang:document.documentElement.lang.slice(0,2)};
     if(!d.nome){return err('Diga-nos como se chama.',f.nome)}
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)){return err('Esse e-mail não parece válido.',f.email)}
     if(d.telefone.replace(/\D/g,'').length<9){return err('Indique um número de telefone válido.',f.telefone)}
